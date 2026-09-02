@@ -1,0 +1,25 @@
+var numeros = []
+var soma = 0
+var contador = 0
+
+enquanto (contador < 10) {
+    var entrada = leia("Digite um número inteiro (ou -1 para sair):")
+    var numero = inteiro(entrada)
+
+    se (numero == -1) {
+        sustar
+    }
+
+    numeros.adicionar(numero)
+    soma = soma + numero
+    contador = contador + 1
+}
+
+escreva("Quantidade de valores lidos: " + texto(contador))
+
+se (contador > 0) {
+    var media = soma / contador
+    escreva("Média dos valores: " + texto(media))
+} senao {
+    escreva("Nenhum valor válido foi digitado.")
+}
