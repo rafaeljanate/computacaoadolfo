@@ -1,18 +1,19 @@
-var nome: texto
-var ano_nascimento: inteiro
-var salario: real
-var resposta: texto
-var idade: inteiro
-var usa_oculos: logico
+var nome = leia("Nome: ")
+var ano_nascimento = inteiro(leia("Ano de nascimento: "))
+var salario = leia("Salario: ")
+var resposta = leia("Voce usa oculos? Responda V ou F: ")
+var idade = 2026 - ano_nascimento
+var usa_oculos = falso
 para var i = 1; i <= 3; i = i + 1 {
     nome = leia("Nome: ")
     ano_nascimento = inteiro(leia("Ano de nascimento: "))
-    salario = real(leia("Salario: "))
+    salario = leia("Salario: ")
     resposta = leia("Voce usa oculos? Responda V ou F: ")
     idade = 2026 - ano_nascimento
     usa_oculos = falso
     se (resposta == 'V') {
         usa_oculos = verdadeiro
+    } 
     }
     se (usa_oculos) {
         escreva("OK, você usa óculos!")
