@@ -4,18 +4,16 @@ var salario: real
 var resposta: texto
 var idade: inteiro
 var usa_oculos: logico
-
-
 para var i = 1; i <= 3; i = i + 1 {
     nome = leia("Nome: ")
     ano_nascimento = inteiro(leia("Ano de nascimento: "))
-    salario = leia("Salario: ")
+    salario = real(leia("Salario: "))
     resposta = leia("Voce usa oculos? Responda V ou F: ")
     idade = 2026 - ano_nascimento
     usa_oculos = falso
     se (resposta == 'V') {
         usa_oculos = verdadeiro
-    } senao{
+    } senão {
         usa_oculos = falso
     }
     se (usa_oculos) {
