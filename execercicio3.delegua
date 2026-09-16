@@ -1,25 +1,32 @@
-var numeros = []
-var soma = 0
-var contador = 0
+var nomes = []
+var notas = []
+var media: real
+var soma_das_medias: real = 0
+var media_da_turma: real
+var quantidade_de_alunos: inteiro = 0
 
-enquanto (contador < 10) {
-    var entrada = leia("Digite um número inteiro (ou -1 para sair):")
-    var numero = inteiro(entrada)
-
-    se (numero == -1) {
-        sustar
-    }
-
-    numeros.adicionar(numero)
-    soma = soma + numero
-    contador = contador + 1
+enquanto (quantidade_de_alunos <= 0) {
+    quantidade_de_alunos = inteiro(leia("Digite a quantidade de estudantes (superior a 0):"))
 }
 
-escreva("Quantidade de valores lidos: " + texto(contador))
+para (var i = 1; i <= quantidade_de_alunos; i = i + 1) {
+    escreva("--- Registro do Aluno ${i} ---")
+    var nome: texto = leia("Digite o nome do(a) estudante:")
+    media = real(leia("Digite a média do(a) estudante:"))
 
-se (contador > 0) {
-    var media = soma / contador
-    escreva("Média dos valores: " + texto(media))
-} senao {
-    escreva("Nenhum valor válido foi digitado.")
+    nomes.adicionar(nome)
+    notas.adicionar(media)
+    soma_das_medias = soma_das_medias + media
+}
+
+media_da_turma = soma_das_medias / quantidade_de_alunos
+var limite_90: real = media_da_turma * 0.90
+
+escreva("\nA média geral da turma foi: ${media_da_turma}")
+escreva("Alunos com média superior a 90% da média da turma (nota > ${limite_90}):")
+
+para (var i = 0; i < quantidade_de_alunos; i = i + 1) {
+    se (notas[i] > limite_90) {
+        escreva("- ${nomes[i]} (Nota: ${notas[i]})")
+    }
 }
