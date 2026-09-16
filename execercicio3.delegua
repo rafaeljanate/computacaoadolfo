@@ -10,7 +10,7 @@ enquanto (quantidade_de_alunos <= 0) {
 }
 
 para (var i = 1; i <= quantidade_de_alunos; i = i + 1) {
-    escreva("--- Registro do Aluno ${i} ---")
+    escreva(" Registro do Aluno ${i} ")
     var nome: texto = leia("Digite o nome do(a) estudante:")
     media = real(leia("Digite a média do(a) estudante:"))
 
@@ -22,7 +22,7 @@ para (var i = 1; i <= quantidade_de_alunos; i = i + 1) {
 media_da_turma = soma_das_medias / quantidade_de_alunos
 var limite_90: real = media_da_turma * 0.90
 
-escreva("\nA média geral da turma foi: ${media_da_turma}")
+escreva("A média geral da turma foi: ${media_da_turma}")
 escreva("Alunos com média superior a 90% da média da turma (nota > ${limite_90}):")
 
 para (var i = 0; i < quantidade_de_alunos; i = i + 1) {
